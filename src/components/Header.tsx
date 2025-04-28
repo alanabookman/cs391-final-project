@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router";
 
 const HeaderDiv = styled.div`
     width: 100%;
@@ -15,25 +16,21 @@ const HeaderDiv = styled.div`
     height: 0;
 `;
 
-const SearchInput = styled.input`
-    padding: 2%;
-    font-size: calc(2vh + 10%);
-`;
+const StyledLink = styled(Link)`
+    padding: 0.25rem;
+    margin: 0.25rem;
+    color: white;
+    font-size: 2rem;
+`
 
-export default function Header({ numJobs, setNumJobs }: { numJobs: number, setNumJobs: (num: number) => void }) {
+export default function Header() {
     return (
         <HeaderDiv>
             <h1>Jobicy Jobs</h1>
-            <SearchInput
-                type="number"
-                placeholder="Number of Jobs"
-                min={1}
-                value={numJobs}
-                onChange={(e) => {
-                    const value = Math.max(1, Number(e.target.value)); // Stops site from crashing if 0 or backspace is clicked
-                    setNumJobs(value);
-                }}
-            />
+            <nav>
+            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/about">About</StyledLink>
+            </nav>
         </HeaderDiv>
     );
 }
