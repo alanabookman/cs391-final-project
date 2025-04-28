@@ -3,8 +3,6 @@ import { DefaultTheme } from "styled-components"
 export const lightTheme: DefaultTheme = {
     bodyBackground: 'white',
     text: 'black',
-    headerBackground: 'black',
-    headertext: 'white',
     cardBackground: 'white',
     cardText: 'black',
     buttonBackground: 'black', 
@@ -16,8 +14,6 @@ export const lightTheme: DefaultTheme = {
 export const darkTheme: DefaultTheme = {
     bodyBackground: 'black',
     text: 'whitesmoke',
-    headerBackground: 'darkslategray',
-    headertext: 'whitesmoke',
     cardBackground: 'black',
     cardText: 'whitesmoke',
     buttonBackground: 'white', 

@@ -5,6 +5,10 @@ import BackToTop from "./BackToTop.tsx";
 import Filter from "./Filter.tsx";
 import { styled } from "styled-components";
 import Footer from "./Footer.tsx";
+import { lightTheme, darkTheme } from "./Themes.ts";
+import { GlobalStyles } from "./globalStyles.ts";
+import {ThemeProvider} from 'styled-components'
+import ThemeButton from "./ThemeButton.tsx";
 
 const StyledDiv = styled.div`
     background-color: whitesmoke;
@@ -12,6 +16,11 @@ const StyledDiv = styled.div`
 
 
 export default function App() {
+    const [darkMode, setDarkMode]= useState(false); // set w/ lightmode
+    const themetoggle = () => { // helper function that switches between the states
+        darkMode== false ? setDarkMode(true) : setDarkMode(false)
+    };
+
     const [data, setData] = useState<Job[]>([]);
     const [numJobs, setNumJobs] = useState<number>(3);
 
@@ -31,13 +40,17 @@ export default function App() {
     }, [numJobs]);
 
     return (
-        <StyledDiv>
-            <BackToTop/>
-            <Filter numJobs={numJobs} setNumJobs={setNumJobs} />
-            <JobFacts data={data} />
-            <BackToTop/>
-            <Footer />
-        </StyledDiv>
+        <ThemeProvider theme = {darkMode ? darkTheme : lightTheme}>
+            <GlobalStyles/>
+            <ThemeButton themetoggle={themetoggle} darkMode = {darkMode}/>
+                <StyledDiv>
+                    <BackToTop/>
+                    <Filter numJobs={numJobs} setNumJobs={setNumJobs} />
+                    <JobFacts data={data} />
+                    <BackToTop/>
+                    <Footer />
+                </StyledDiv>
+        </ThemeProvider>
     );
 }
 

@@ -3,7 +3,6 @@ import JobContent from "./components/JobContent";
 import Header from "./components/Header";
 import { createBrowserRouter, Route, Routes, RouterProvider } from "react-router";
 import { styled } from "styled-components";
->>>>>>> main
 
 const StyledWrapper = styled.div`
     width: 80vw;
