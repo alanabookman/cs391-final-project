@@ -6,7 +6,7 @@ import Filter from "./Filter.tsx";
 import { styled } from "styled-components";
 import Footer from "./Footer.tsx";
 import { lightTheme, darkTheme } from "./Themes.ts";
-import { GlobalStyles } from "./globalStyles.ts";
+import { GlobalStyles } from "./GlobalStyles.ts";
 import {ThemeProvider} from 'styled-components'
 import ThemeButton from "./ThemeButton.tsx";
 

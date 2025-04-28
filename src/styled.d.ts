@@ -1,5 +1,3 @@
-// https://stackoverflow.com/questions/63029643/styledcomponents-with-typescript-and-themeprovider-what-are-the-right-types
-//https://styled-components.com/docs/api#create-a-declarations-file
 import 'styled-components'
 declare module 'styled-components' {
     export interface DefaultTheme {

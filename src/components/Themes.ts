@@ -7,7 +7,7 @@ export const lightTheme: DefaultTheme = {
     cardText: 'black',
     buttonBackground: 'black', 
     buttonText: 'white',
-    border: '3px black solid',
+    border: 'black',
     insideBackground: 'white'
 }
 
@@ -18,6 +18,6 @@ export const darkTheme: DefaultTheme = {
     cardText: 'whitesmoke',
     buttonBackground: 'white', 
     buttonText: 'black',
-    border: '3px whitesmoke solid',
+    border: 'white',
     insideBackground: 'darkslategray'
 }
