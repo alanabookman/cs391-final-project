@@ -19,7 +19,7 @@ const HeaderDiv = styled.div`
 const StyledLink = styled(Link)`
     padding: 0.25rem;
     margin: 0.25rem;
-    color: white;
+    color: ${({ theme }) => theme.headertext};
     font-size: 2rem;
 `
 
