@@ -17,7 +17,7 @@ const SingleFactDiv = styled.div`
     margin: 1%;
     background-color: ${({ theme }) => theme.cardBackground};
     color: ${({ theme }) => theme.cardText};
-    border: ${({ theme }) => theme.cardText};
+    border: 5px solid ${({ theme }) => theme.border};
     font: italic small-caps bold calc(2px + 1.3vw) Garamond, serif;
     text-align: center;
 `;
