@@ -1,11 +1,11 @@
 import styled from "styled-components";
-
+import { ThemeToggleProps } from "../interfaces/themeProps";
 // I need the button to stay on the bottom right corner and it stays there as the user scrolls down
 //https://stackoverflow.com/questions/27296078/make-a-button-always-visible-on-scroll
 //https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 const StyledButton= styled.button`
-    color: white;
-    background-color:black;
+    color: ${({ theme }) => theme.buttonText};
+    background-color:${({ theme }) => theme.buttonBackground};
     z-index: 1000; // make sure its on top of all other elements not behind anything
     border-radius:10px;
     position:fixed;

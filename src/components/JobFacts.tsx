@@ -5,7 +5,7 @@ const AllFactsDiv = styled.div`
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    background-color: whitesmoke;
+    background-color: ${({ theme }) => theme.insideBackground};
 `;
 
 const SingleFactDiv = styled.div`
@@ -15,9 +15,9 @@ const SingleFactDiv = styled.div`
     max-width: 30%;
     padding: 2%;
     margin: 1%;
-    background-color: white;
-    color: darkslategray;
-    border: 3px black solid;
+    background-color: ${({ theme }) => theme.cardBackground};
+    color: ${({ theme }) => theme.cardText};
+    border: ${({ theme }) => theme.cardText};
     font: italic small-caps bold calc(2px + 1.3vw) Garamond, serif;
     text-align: center;
 `;
