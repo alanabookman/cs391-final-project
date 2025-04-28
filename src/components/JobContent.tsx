@@ -4,6 +4,7 @@ import { Job } from "../interfaces/Job.ts";
 import BackToTop from "./BackToTop.tsx";
 import Filter from "./Filter.tsx";
 import { styled } from "styled-components";
+import Footer from "./Footer.tsx";
 
 const StyledDiv = styled.div`
     background-color: whitesmoke;
@@ -35,6 +36,7 @@ export default function App() {
             <Filter numJobs={numJobs} setNumJobs={setNumJobs} />
             <JobFacts data={data} />
             <BackToTop/>
+            <Footer />
         </StyledDiv>
     );
 }
