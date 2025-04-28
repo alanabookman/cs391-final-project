@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 import { Job } from "./interfaces/Job.ts";
 import Header from "./components/Header.tsx";
 import BackToTop from "./components/BackToTop.tsx";
+import { lightTheme, darkTheme } from "./components/Themes.ts";
+import { GlobalStyles } from "./components/globalStyles.ts";
+import {ThemeProvider} from 'styled-components'
+import ThemeButton from "./components/ThemeButton.tsx";
 
 const ParentDiv = styled.div`
     width: 80vw;
@@ -14,6 +18,10 @@ const ParentDiv = styled.div`
 export default function App() {
     const [data, setData] = useState<Job[]>([]);
     const [numJobs, setNumJobs] = useState<number>(3);
+    const [darkMode, setDarkMode]= useState(false); // set w/ lightmode
+    const themetoggle = () => { // helper function that switches between the states
+        darkMode== false ? setDarkMode(true) : setDarkMode(false)
+    };
 
     useEffect(() => {
         async function fetchData(): Promise<void> {
@@ -31,12 +39,17 @@ export default function App() {
     }, [numJobs]);
 
     return (
-        <ParentDiv>
-            <BackToTop/>
-            <Header numJobs={numJobs} setNumJobs={setNumJobs} />
-            <JobFacts data={data} />
-            <BackToTop/>
-        </ParentDiv>
+        <ThemeProvider theme = {darkMode ? darkTheme : lightTheme}>
+            <>
+            <GlobalStyles/>
+                <ThemeButton themetoggle={themetoggle} darkMode = {darkMode}/>
+                <ParentDiv>
+                    <Header numJobs={numJobs} setNumJobs={setNumJobs} />
+                    <JobFacts data={data} />
+                    <BackToTop />
+                </ParentDiv>
+            </>
+        </ThemeProvider>
     );
 }
 

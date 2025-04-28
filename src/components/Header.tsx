@@ -3,8 +3,8 @@ import styled from "styled-components";
 const HeaderDiv = styled.div`
     width: 100%;
     padding: 5%;
-    background-color: black;
-    color: white;
+    background-color: ${({ theme }) => theme.headerBackground};
+    color: ${({ theme }) => theme.headertext};
     display: flex;
     justify-content: space-between;
     align-items: center;
