@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Job } from "./interfaces/Job.ts";
 import Header from "./components/Header.tsx";
 import BackToTop from "./components/BackToTop.tsx";
+import Footer from "./components/Footer.tsx";
 
 const ParentDiv = styled.div`
     width: 80vw;
@@ -36,6 +37,7 @@ export default function App() {
             <Header numJobs={numJobs} setNumJobs={setNumJobs} />
             <JobFacts data={data} />
             <BackToTop/>
+            <Footer />
         </ParentDiv>
     );
 }
