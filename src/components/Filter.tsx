@@ -10,6 +10,7 @@ const SearchInput = styled.input`
 const StyledH3 = styled.h3`
     font-size: calc(2px + 2vw);
     padding: 0% 2%;    
+    color: black;
 `;
 
 const FilterWrapper = styled.div`

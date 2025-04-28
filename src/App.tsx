@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import { createBrowserRouter, Route, Routes, RouterProvider } from "react-router";
 import { styled } from "styled-components";
 
-
 const StyledWrapper = styled.div`
     width: 80vw;
     margin: auto;
