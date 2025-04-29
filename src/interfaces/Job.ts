@@ -1,3 +1,5 @@
+//File implemented by Alana Bookman (bookmana@bu.edu)
+
 export interface Job {
     id: number;
     jobTitle: string;
@@ -8,4 +10,5 @@ export interface Job {
     jobExcerpt: string;
     url: string;
     pubDate: string;
+    jobDescription: string;
 }
