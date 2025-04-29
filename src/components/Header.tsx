@@ -1,3 +1,12 @@
+/*
+Component by James Liu (jamesliu@bu.edu)
+It is a header component for displaying the nav buttons, with position: sticky and top: 0 to make sure that it stays visible throughout user's scroll journey
+
+The logo is from vectorlogo, and leads back to the homepage.
+
+Built with styled-components, react-router used for redirection
+ */
+
 import styled from "styled-components";
 import { Link } from "react-router";
 
