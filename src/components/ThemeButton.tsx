@@ -13,13 +13,14 @@ adjusted for typescript and for what css used
  */
 
 import styled from "styled-components";
-import { ThemeToggleProps } from "../interfaces/ThemeProps";
+import { ThemeToggleProps } from "../interfaces/themeProps";
 
 const StyledButton= styled.button`
     background: ${({theme})=> theme.buttonBackground};
     color: ${({theme})=> theme.buttonText};
     border-radius: 10px;
     font-size:calc(2vh + 10%); 
+    margin-left: 2vw;
 `;
 
 

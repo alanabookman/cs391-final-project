@@ -20,6 +20,7 @@ const StyledH3 = styled.h3`
     text-align: center;
     font-size: calc(2px + 2vw);
     color: black;
+    font-weight: bold;
 `;
 
 const StyledUl = styled.ul`

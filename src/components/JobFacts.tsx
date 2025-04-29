@@ -16,17 +16,20 @@ const AllFactsDiv = styled.div`
 
 // styled component for the individual job cards
 const SingleFactDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 30%;
-  padding: 2%;
-  margin: 1%;
-  background-color: ${({ theme }) => theme.cardBackground};
-  color: ${({ theme }) => theme.cardText};
-  border: 5px solid ${({ theme }) => theme.border};
-  font: italic small-caps bold calc(2px + 1.3vw) Garamond, serif;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 30%;
+    padding: 2%;
+    margin: 1%;
+    background-color: ${({ theme }) => theme.cardBackground};
+    color: ${({ theme }) => theme.cardText};
+    border: 5px solid ${({ theme }) => theme.border};
+    font: italic small-caps bold calc(2px + 1.3vw) Garamond, serif;
+    text-align: center;
+    min-height: 200px;
+    flex-shrink: 0; 
+    flex-grow: 1;
 `;
 
 // main JobFacts function that maps job data into the styled cards
