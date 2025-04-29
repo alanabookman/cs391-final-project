@@ -8,13 +8,14 @@
 import { styled } from "styled-components";
 
 // collection of styled components for the page
+// div wrapper
 const AboutContentDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: whitesmoke;
 `
-
+// styled title
 const StyledH3 = styled.h3`
     margin: 2vw 0;
     text-align: center;
@@ -23,6 +24,7 @@ const StyledH3 = styled.h3`
     font-weight: bold;
 `;
 
+// styled UL tag
 const StyledUl = styled.ul`
     display: flex;
     flex-direction: column;
@@ -32,6 +34,7 @@ const StyledUl = styled.ul`
     padding: 
 `;
 
+// styled LI tags
 const StyledLi = styled.li`
     width: 95%;
     padding: 2vh 0;
