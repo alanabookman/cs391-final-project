@@ -15,6 +15,10 @@ import Header from "./components/Header";
 import { createBrowserRouter, Route, Routes, RouterProvider } from "react-router";
 import { styled } from "styled-components";
 
+// this import statement makes sure the Footer Carousel component works
+// see the notes in Footer.jsx for more info
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // simple styled component for the wrapping of the whole page
 const StyledWrapper = styled.div`
     width: 80vw;
