@@ -1,5 +1,13 @@
+/*
+  Component implemented by William Parker (wqparker@bu.edu)
+  This is a simple 'About' page that users can navigate to, displaying 
+  simple information about what our project is and some of the 
+  modules used in its making with brief explanations of thme, as well 
+  as credit to the team.
+*/
 import { styled } from "styled-components";
 
+// collection of styled components for the page
 const AboutContentDiv = styled.div`
     display: flex;
     flex-direction: column;
@@ -32,6 +40,7 @@ const StyledLi = styled.li`
     margin: 2% 0;
 `;
 
+// final component
 export default function AboutPage() {
     return (
         <AboutContentDiv>
@@ -48,7 +57,8 @@ export default function AboutPage() {
                 </StyledLi>
                 <StyledLi>
                     We utilized a few dependencies for our project, namely react as the backbone our project, styled-components for implementing
-                    CSS styling on our tags, react-router to handle static page navigation, and react-bootstrap for //TODO//.
+                    CSS styling on our tags, react-router to handle static page navigation, and react-bootstrap/carousel for cycling throuh different
+                    tips realted to job searching in an efficient and easy manner.
                 </StyledLi>
                 <StyledLi>
                     This project was worked on and completed by: Aaron, Alana, Ana, James, and William.
