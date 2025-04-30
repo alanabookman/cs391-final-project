@@ -13,14 +13,17 @@ const AboutContentDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: ${props => props.theme.bodyBackground};
+    min-height: 100vh;
+    padding: 2rem;
 `
+
 // styled title
 const StyledH3 = styled.h3`
     margin: 2vw 0;
     text-align: center;
     font-size: calc(2px + 2vw);
-    color: black;
+    color: ${props => props.theme.text};
     font-weight: bold;
 `;
 
@@ -31,7 +34,8 @@ const StyledUl = styled.ul`
     justify-content: space-evenly;
     font-size: calc(2px + 1.5vw);
     list-style: none;
-    padding: 
+    padding: 0;
+    color: ${props => props.theme.text};
 `;
 
 // styled LI tags
@@ -53,16 +57,17 @@ export default function AboutPage() {
                 <StyledLi>
                     This is our CS 391 Final Group Project. We chose to make a simple webapp that works with the Jobicy API to display job posts.
                     There is an added filter so that the user may display anywhere between one and fifty job posts at once on the page, as well as 
-                    a button in the bottom-right of the screen to take the user to the top of the page immediately.
+                    a button in the bottom-right of the screen to take the user to the top of the page immediately. In addition, on the main page
+                    there is a darkmode/lightmode button that will change the webpage's color themes to be in dark or light.
                 </StyledLi>
                 <StyledLi>
                     Job posts displayed have an assortment of infoamtion at the ready including: title, company name and logo, the job type, the job location,
-                    a short exerpt about the listed job, and a clickable link that redirects users to the job post directly on Jobicy.com.
+                    and a clickable link that redirects users to the job post directly on Jobicy.com.
                 </StyledLi>
                 <StyledLi>
                     We utilized a few dependencies for our project, namely react as the backbone our project, styled-components for implementing
                     CSS styling on our tags, react-router to handle static page navigation, and react-bootstrap/carousel for cycling throuh different
-                    tips realted to job searching in an efficient and easy manner.
+                    tips realted to job searching in an efficient and easy manner within the footer of the webpage.
                 </StyledLi>
                 <StyledLi>
                     This project was worked on and completed by: Aaron, Alana, Ana, James, and William.

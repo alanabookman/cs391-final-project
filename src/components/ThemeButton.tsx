@@ -15,21 +15,28 @@ adjusted for typescript and for what css used
 import styled from "styled-components";
 import { ThemeToggleProps } from "../interfaces/themeProps";
 
-const StyledButton= styled.button`
-    background: ${({theme})=> theme.buttonBackground};
-    color: ${({theme})=> theme.buttonText};
+const StyledButton = styled.button`
+    background: ${({theme}) => theme.buttonBackground};
+    color: ${({theme}) => theme.buttonText};
     border-radius: 10px;
-    font-size:calc(2vh + 10%); 
+    font-size: calc(2vh + 10%); 
     margin-left: 2vw;
+    padding: 10px 20px;
+    border: 2px solid ${({theme}) => theme.border};
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
 `;
 
-
-export default function ThemeButton ({themetoggle, darkMode}: ThemeToggleProps){
+export default function ThemeButton({themetoggle, darkMode}: ThemeToggleProps) {
     return (
         <StyledButton onClick={themetoggle}> 
         {/* use the passed prop as onClick */}
             {darkMode ? 'Light Mode' : 'Dark Mode'}
             {/* use the passed prop state */}
         </StyledButton>
-    )
+    );
 }

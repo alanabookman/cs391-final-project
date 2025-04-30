@@ -18,6 +18,7 @@ const StyledButton= styled.button`
     background-color:${({ theme }) => theme.buttonBackground};
     z-index: 1000; // make sure its on top of all other elements not behind anything
     border-radius:10px;
+    border: 2px white solid;
     position:fixed;
     bottom: 5%;
     right:3%;
